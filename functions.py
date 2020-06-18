@@ -35,6 +35,7 @@ def get_top_words_from_text(clean_text, number_of_words):
 
     words = [morph.parse(w)[0].normal_form for w in words if morph.parse(w)[0].tag.POS not in ignore_words and w.isdigit() is not True]
     most_common_words = Counter(words).most_common(number_of_words)
+
     return most_common_words
 
 
